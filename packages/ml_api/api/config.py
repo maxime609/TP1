@@ -4,8 +4,7 @@ import pathlib
 import os
 import sys
 
-#PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
-PACKAGE_ROOT = pathlib.Path('C:/Users/Maxime/courA61/TP1/packages/ml_api')
+PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 FORMATTER = logging.Formatter(
     "%(asctime)s — %(name)s — %(levelname)s —"
@@ -34,7 +33,7 @@ def get_logger(*, logger_name):
 
     logger = logging.getLogger(logger_name)
 
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     logger.addHandler(get_console_handler())
     logger.addHandler(get_file_handler())
